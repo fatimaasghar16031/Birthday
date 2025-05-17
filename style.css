@@ -1,0 +1,241 @@
+body {
+    background-color: #000000;
+    color: #ffd700;
+    font-size: 18px;
+
+        font-family: 'Lobster', cursive;
+        background-color: #000;
+        color: #ffd700;
+      }
+      @media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+      
+      h1, h2, h3 {
+        font-family:  'Lobster', cursive;
+      }
+      
+      .countdown {
+        font-family:  'Lobster', cursive;
+        font-size: 2dvh;
+        font-weight: bold;
+      }
+        
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom,#000000, #bd00009a, #000000);
+  }
+ @media (max-width: 480px) {
+  .hero {
+    font-size: 18px;
+  }
+}  
+  .hero h1 {
+     font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .countdown {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .countdown-box {
+    display: inline-block;
+    background-color: #111;
+    border: 2px solid #ffd700;
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px #ffd70088;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .countdown {
+    font-size: 2rem;
+    color: #ffd700;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px #000;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 15px #ffd70088;
+    }
+    50% {
+      box-shadow: 0 0 25px #ffd700cc;
+    }
+    100% {
+      box-shadow: 0 0 15px #ffd70088;
+    }
+  }
+  
+  
+  .card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #111; /* Ensure background is set */
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #e21e4c,#ffe819ef,#ff8a2b, #d1221c);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: glowing-border 8s ease infinite;
+    border-radius: 15px;
+    filter: blur(4px);
+  }
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    color: #ffd700;
+    border-radius: 13px;
+    z-index: 0;
+  }
+  
+  @keyframes glowing-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery img {
+    width: 100%;
+      border: 3px dashed #ffd700;
+    margin-bottom: 15px;
+  }
+  
+  .special-message {
+    background-color: #222121;
+    padding: 1rem;
+  margin: 1rem auto;
+  border: 2px dashed  #ffd700;
+  max-width: 600px;
+  box-sizing: border-box;
+  font-size: 1rem;
+    text-align: center;
+      background: linear-gradient(to bottom,#000000, #bd00009a, #000000);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+} */
+
+.container {
+    max-width: 900px;
+}
+
+.template {
+  background: linear-gradient(45deg, #e21e4c,#ffe819ef,#ff8a2b, #d1221c);
+  border-radius: 80px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(241, 77, 77, 0.1);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    
+}
+.box{
+  padding-left: 1%;
+}
+
+.template:hover {
+    transform: translateY(-10px);
+}
+
+.template-title {
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.template-description {
+    font-size: 1.1rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+  
+  .confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
